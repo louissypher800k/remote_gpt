@@ -47,7 +47,7 @@ async def read_messages():
     async with TelegramClient(name, api_id, api_hash) as client:
         async for message in client.iter_messages(entity, limit=2):
             # get one recent message from the groupchat that isn't from a bot and save the values in the variables
-            if message.sender_id not in [5709276411, 609517172, 5939541389] and not message.sticker:
+            if message.sender_id not in [5709276411, 609517172, 5939541389, 5845476855] and not message.sticker:
                 if message.media is not None:
                     #we need this so the bot doesn't crash when it encounters a GIF or MEDIA message
                     print("Skipping media message")
